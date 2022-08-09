@@ -4,12 +4,12 @@ import React from 'react';
 export default function Nav() {
 
     return (
-        <header className="container my-4 fixed font-semibold">
-            <nav id="navContainer" className="flex justify-center items-center">
+        <header className="md:container my-4 fixed font-semibold">
+            <nav id="navContainer" className="flex items-center">
                 <a id="navbar-logo" href="#" className="flex items-center mx-auto text-2xl ">
                     <span>Kevin Lazaro</span>
                 </a>
-                <div id="nav-menu" className="bg-white ml-auto text-lg">
+                <div id="nav-menu" className="bg-white m-auto text-lg">
                     <ul className="flex space-x-10">
                         <li class="nav_item">
                             <a href="#" >Home</a>
