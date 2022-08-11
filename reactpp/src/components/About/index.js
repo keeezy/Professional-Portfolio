@@ -21,7 +21,7 @@ const childvariant = {
 }
 export default function About() {
     return (
-        <motion.section id="hero-container" className="grid md:flex justify-center mx-auto gap-16 pt-10 items-center mx-auto ">
+        <motion.section id="about-container" className="md:flex justify-center mx-auto gap-32 items-center mx-auto ">
             <motion.div
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}

@@ -19,24 +19,27 @@ const projects = [
     {
         name: "Note Taker",
         image: notetaker,
-        description: "Note Taker application that can be used to write and save notes",
+        description: "Write and save notes",
         link: "https://pure-woodland-91033.herokuapp.com/",
     },
 
 ]
 
 const worksMap = projects.map((work) => (
-    <div className='text-center'id='project-data'>
+    <div className='text-center border border-[#D1D1D1] bg-[#FBFBFB] rounded-3xl'id='project-data'>
         <div>
             <a href={work.link}>
-                <h3>
+                <h3 className="font-bold text-xl pt-6">
                     {work.name}
                 </h3>
             </a>
         </div>
-        <a className="w-32"href={work.link}>
-            <img className="object-cover"src={work.image} alt={work.name} />
+        <a className=""href={work.link}>
+            <img className="h-80 p-10 rounded-[50px]"src={work.image} alt={work.name} />
         </a>
+        <p className="font-semibold text-base pb-6">
+            {work.description}
+        </p>
     </div>
 ))
 
@@ -49,10 +52,10 @@ export default function Projects() {
 
     return (
         <section className="grid mx-auto gap-16 pt-10"id='projects-container'>
-            <h1 className="flex justify-center">
+            <h1 className="flex justify-center text-5xl font-semibold">
                 Projects
             </h1>
-            <div className="grid gap-10 grid-cols-3 " id='projects-list'>
+            <div className="md:grid gap-10 grid-cols-3" id='projects-list'>
                 {worksMap}
             </div>
         </section>

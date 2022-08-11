@@ -8,8 +8,8 @@ import heroImage from "../../images/heroImage.png"
 export default function Hero() {
 
     return (
-        <section id="hero-container" className="grid md:flex justify-center gap-16 pt-32 items-center mx-auto ">
-            <motion.div id="home-data" className=" bg-[#FBFBFB] border border-[#D1D1D1] rounded-xl font-semibold pl-12 p-9"
+        <section id="hero-container" className="md:flex justify-center gap-32 pt-32 items-center mx-auto ">
+            <motion.div id="home-data" className=" bg-[#FBFBFB] border border-[#D1D1D1] rounded-xl font-semibold pl-12 p-9 md:pr-32"
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.3, delay: .3 }}>
