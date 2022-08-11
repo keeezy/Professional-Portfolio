@@ -4,9 +4,9 @@ import React from 'react';
 export default function Nav() {
 
     return (
-        <header className="md:container my-4 fixed font-semibold">
+        <header className="md:w-full bg-white py-4 fixed font-semibold">
             <nav id="navContainer" className="flex items-center">
-                <a id="navbar-logo" href="#" className="flex items-center mx-auto text-2xl ">
+                <a id="navbar-logo" href="#" className="flex items-center ml-auto text-2xl ">
                     <span>Kevin Lazaro</span>
                 </a>
                 <div id="nav-menu" className="bg-white m-auto text-lg">
