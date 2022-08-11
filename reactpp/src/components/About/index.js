@@ -3,22 +3,8 @@ import { motion } from "framer-motion";
 import gitHubLogo from "../../images/icons/githublogo.svg"
 import linkedInLogo from "../../images/icons/linkedinlogo.svg"
 import heroImage from "../../images/heroImage.png"
+import animatedTwo from "../../images/animated2.png"
 
-const parentVariant = {
-    initial: {
-        opacity: 0
-    },
-    after: {
-        opacity: 1,
-        transtion: {
-            staggerChildren: .2
-        }
-    }
-}
-
-const childvariant = {
-    intial: {}
-}
 export default function About() {
     return (
         <motion.section id="about-container" className="md:flex justify-center mx-auto gap-32 items-center mx-auto ">
@@ -29,11 +15,11 @@ export default function About() {
             >
                 <img
                     className="hidden md:flex h-[32rem]"
-                    src={heroImage}
+                    src={animatedTwo}
                 />
             </motion.div>
             <motion.div id="about-data" className=" font-semibold pl-12 p-9"
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1.3, delay: .3 }}>
                 <h1 className="text-7xl text-[#1E287F] font-bold">

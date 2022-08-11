@@ -5,10 +5,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import heroImage from "../../images/heroImage.png"
+import animatedAbout from "../../images/animatedabout.png"
 export default function Hero() {
 
     return (
-        <section id="hero-container" className="md:flex justify-center gap-32 pt-32 items-center mx-auto ">
+        <section id="hero-container" className="md:flex justify-center gap-16 pt-32 items-center mx-auto ">
             <motion.div id="home-data" className=" bg-[#FBFBFB] border border-[#D1D1D1] rounded-xl font-semibold pl-12 p-9 md:pr-32"
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
@@ -46,8 +47,8 @@ export default function Hero() {
                 transition={{ duration: 1.3, delay: .5, type: "spring", duration: 3, bounce: .4 }}
             >
                 <img
-                    className="hidden md:flex h-[32rem]"
-                    src={heroImage}
+                    className="hidden md:flex h-[32rem] pt-14"
+                    src={animatedAbout}
                 />
             </motion.div>
         </section>

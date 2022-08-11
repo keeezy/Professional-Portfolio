@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import aldente from '../../images/projectimages/aldente.png'
 import notetaker from '../../images/projectimages/notetaker.png'
 import oldegg from '../../images/projectimages/oldegg.png'
@@ -24,6 +25,23 @@ const projects = [
     },
 
 ]
+
+const parentVariant = {
+    initial: {
+        opacity: 0
+    },
+    after: {
+        opacity: 1,
+        transtion: {
+            staggerChildren: .2
+        }
+    }
+}
+
+const childvariant = {
+    intial: {opacity:0},
+    after: {opacity:1}
+}
 
 const worksMap = projects.map((work) => (
     <div className='text-center border border-[#D1D1D1] bg-[#FBFBFB] rounded-3xl'id='project-data'>
