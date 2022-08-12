@@ -6,14 +6,31 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import heroImage from "../../images/heroImage.png"
 import animatedAbout from "../../images/animatedabout.png"
+
+const containerVariantBox = {
+    hidden: {
+        opacity: 0,
+        x: -100,
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            duration: 1.3,
+            delay: .3
+        }
+    }
+}
+
 export default function Hero() {
 
     return (
         <section id="hero-container" className="md:flex justify-center gap-16 pt-32 items-center mx-auto ">
             <motion.div id="home-data" className=" bg-[#FBFBFB] border border-[#D1D1D1] rounded-xl font-semibold pl-12 p-9 md:pr-32"
-                initial={{ x: -100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1.3, delay: .3 }}>
+                variants={containerVariantBox}
+                initial= "hidden"
+                animate= "visible"
+                >
                 <p className="text-lg flex">Hello
                     <motion.div
                     animate={{rotate:90}}

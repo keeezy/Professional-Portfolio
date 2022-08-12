@@ -26,25 +26,37 @@ const projects = [
 
 ]
 
-const parentVariant = {
-    initial: {
-        opacity: 0
+const containerVariantBox = {
+    hidden: {
+        opacity: 0,
     },
-    after: {
+    visible: {
         opacity: 1,
-        transtion: {
-            staggerChildren: .2
+        transition: {
+            staggerChildren: .3
         }
     }
 }
 
-const childvariant = {
-    intial: {opacity:0},
-    after: {opacity:1}
+const childVariants = {
+    hidden: {
+        opacity: 0,
+        x: -100
+
+    },
+    visible: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            type: "spring",
+            bounce: .2,
+            duration: 1,
+        }
+    }
 }
 
 const worksMap = projects.map((work) => (
-    <div className='text-center border border-[#D1D1D1] bg-[#FBFBFB] rounded-3xl'id='project-data'>
+    <motion.div variants={childVariants} className='text-center border border-[#D1D1D1] bg-[#FBFBFB] rounded-3xl' id='project-data'>
         <div>
             <a href={work.link}>
                 <h3 className="font-bold text-xl pt-6">
@@ -52,13 +64,13 @@ const worksMap = projects.map((work) => (
                 </h3>
             </a>
         </div>
-        <a className=""href={work.link}>
-            <img className="h-80 p-10 rounded-[50px]"src={work.image} alt={work.name} />
+        <a className="" href={work.link}>
+            <img className="h-80 p-10 rounded-[50px]" src={work.image} alt={work.name} />
         </a>
         <p className="font-semibold text-base pb-6">
             {work.description}
         </p>
-    </div>
+    </motion.div>
 ))
 
 
@@ -69,13 +81,16 @@ const worksMap = projects.map((work) => (
 export default function Projects() {
 
     return (
-        <section className="grid mx-auto gap-16 pt-10"id='projects-container'>
+        <motion.section className="grid mx-auto gap-16 pt-10" id='projects-container'
+            variants={containerVariantBox}
+            initial="hidden"
+            whileInView="visible">
             <h1 className="flex justify-center text-5xl font-semibold">
                 Projects
             </h1>
             <div className="md:grid gap-10 grid-cols-3" id='projects-list'>
                 {worksMap}
             </div>
-        </section>
+        </motion.section>
     )
 }
