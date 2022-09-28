@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import aldente from '../../images/projectimages/aldente.png'
 import notetaker from '../../images/projectimages/notetaker.png'
 import oldegg from '../../images/projectimages/oldegg.png'
-
+import NFTScheduler from '../../images/projectimages/NFTpic.png'
 const projects = [
     {
         name: "Al Dente",
@@ -18,10 +18,10 @@ const projects = [
         link: "https://oldegg.herokuapp.com/",
     },
     {
-        name: "Note Taker",
-        image: notetaker,
-        description: "Write and save notes",
-        link: "https://pure-woodland-91033.herokuapp.com/",
+        name: "NFT Scheduler",
+        image: NFTScheduler,
+        description: "Scheduler application",
+        link: "https://nofreetoes.herokuapp.com/",
     },
 
 ]
@@ -50,7 +50,7 @@ const childVariants = {
         transition: {
             type: "spring",
             bounce: .2,
-            duration: 1,
+            duration: 1.3,
         }
     }
 }
